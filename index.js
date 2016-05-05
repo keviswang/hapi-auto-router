@@ -1,5 +1,5 @@
 'use strict'
-const Path = require('fs')
+const Path = require('path')
 const Async = require('async')
 const Hoek = require('hoek')
 const Glob = require('glob')
