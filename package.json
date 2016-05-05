@@ -1,0 +1,33 @@
+{
+  "name": "hapi-auto-router",
+  "version": "1.0.0",
+  "description": "auto register routes for hapi",
+  "main": "index.js",
+  "scripts": {
+    "test": "lab -c -L",
+    "test-cover": "lab -c -r html -o ./test/artifacts/coverage.html && open ./test/artifacts/coverage.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/keviswang/hapi-auto-router.git"
+  },
+  "author": "keviswang <keviswang@outlook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/keviswang/hapi-auto-router/issues"
+  },
+  "homepage": "https://github.com/keviswang/hapi-auto-router",
+  "engines": {
+    "node": ">=4.0.0"
+  },
+  "devDependencies": {
+    "hapi": "13.x.x",
+    "code": "2.x.x",
+    "lab": "10.x.x"
+  },
+  "dependencies": {
+    "async": "^2.0.0-rc.3",
+    "glob": "^7.0.3",
+    "hoek": "^4.0.0"
+  }
+}
