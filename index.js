@@ -1,6 +1,7 @@
 'use strict'
 const Path = require('fs')
 const Async = require('async')
+const Hoek = require('hoek')
 const Glob = require('glob')
 
 exports.register = function (server, options, next) {
