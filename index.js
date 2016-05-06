@@ -8,8 +8,7 @@ exports.register = function (server, options, next) {
   const globOptions = {
     nodir: true,
     strict: true,
-    cwd: options.cwd || process.cwd(),
-    ignore: options.ignore
+    cwd: options.cwd || process.cwd()
   }
 
   Glob(options.routes, globOptions, (err, files) => {
@@ -18,7 +17,7 @@ exports.register = function (server, options, next) {
       const path = Path.resolve(globOptions.cwd, file)
       const route = require(path)
       server.route(route.default || route)
-      server.log(['auto-router', 'plugin'], 'Route `' + path + '` loaded')
+      server.log(['hapi-auto-router', 'plugin'], 'Route File ' + file + ' loaded')
       return Hoek.nextTick(callback)()
     }, next)
   })
